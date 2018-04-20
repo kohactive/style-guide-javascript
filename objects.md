@@ -57,11 +57,11 @@ One-line properties can be stacked without any padding, but it is recommended to
     likesCats: false,
 
     goForAWalk(length) {
-      return this.walks({ length });
+      return walks({ length });
     },
 
     goForARide() {
-      return this.rolls();
+      return rolls();
     }
   };
   ```
@@ -71,10 +71,10 @@ One-line properties can be stacked without any padding, but it is recommended to
     goodBoy: true,
     likesCats: false,
     goForAWalk(length) {
-      return this.walks({ length });
+      return walks({ length });
     },
     goInTheCar() {
-      return this.rolls();
+      return rolls();
     }
   };
   ```
