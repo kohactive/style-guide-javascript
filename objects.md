@@ -9,7 +9,7 @@ Use dot notation whenever possible. Even if it causes some inconsistency, it is 
     apiKey: "abc123"
   };
 
-  ENV['ember-simple-auth] = {
+  ENV["ember-simple-auth"] = {
     authenticator: "application"
   }
   ```
