@@ -83,11 +83,11 @@ this.store.findRecord("dog", 3)
 ## Array Methods
 Always use array methods instead of `for` and `while` loops
 
-- Use `map` when the return value should be an array that matches the length of original, for example when pulling one attribute from an array of objects
+- Use `map` when the return value should be an array that matches the order and length of the original array, for example when pulling one attribute from an array of objects
 
   `let ids = arr.map((a) => a.id))`
 
-- Use `forEach` when you don't need the iterator to return anything, for example if an action needs to be performed on each element in the array
+- Use `forEach` when you don't need the iterator to return anything, for example if a method should be called on each element in the array
 
   `arr.forEach((a) => doSomethingTo(a))`
 
