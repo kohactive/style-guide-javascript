@@ -117,7 +117,7 @@ There should be no space at the beginning and end of arrays
 
   **Good**
   ```javascript
-  [, 2, 3, 4]
+  [1, 2, 3, 4]
   ```
   **Bad**
   ```javascript
