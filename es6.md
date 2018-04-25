@@ -1,5 +1,9 @@
 # ES6
 
+We like to use ES6 in Ember apps and anywhere else we possibly can.
+
+Please make sure that Babel (or another transpiler) is being used (if you aren't working on an Ember.js project) before you try to use any of the guidelines below.
+
 ### Destructuring in Assignment
 Use whenever possible
 
@@ -115,4 +119,40 @@ let endpoint = `${ENV.apiPrefix}/posts`;
 **Bad**
 ```javascript
 let endpoint = ENV.apiPrefix + '/posts';
+```
+
+---
+
+## Promises
+
+Promise returns should be a single line that either returns the same thing the promise resolves or calls a private method that handles the promise's resolved data
+
+**Good**
+```javascript
+this.get("ajax").post(endpoint, { data })
+  .then((result) => result)
+  .catch((e) => e);
+
+// OR
+
+this.get("ajax").post(endpoint, { data })
+  .then((result) => this._handleResult(result))
+  .catch((error) => this._handleError(error));
+```
+**Bad**
+```javascript
+this.get("ajax").post(endpoint, { data });
+  .then((result) => {
+    return result;
+  }).catch((e) => {
+    return e;
+  });
+
+// OR
+
+this.get("ajax").post(endpoint, { data })
+  .then((result) => {
+    let parsedResult = this.parseResult(result);
+    return this.reparsedResult(parsedResult);
+  })
 ```
