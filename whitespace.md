@@ -1,6 +1,6 @@
 # Whitespace
 
-It's important for our team to be on the same page when it comes to the whitespace in our code. Most of the benefits come from having to put significantly less cognitive energy into figuring out what code should look like. Additional benefits include cleaner git diffs and code that is easier to grep visually for other kohactive team members
+It's important for our team to be on the same page when it comes to the whitespace in our code. Most of the benefits come from having to put significantly less cognitive energy into figuring out what the code we write should look like. Additional benefits include cleaner git diffs and code that is easier to visually grep for other kohactive team members
 
 - Indentation should be done with 2 spaces. Not tabs.
 

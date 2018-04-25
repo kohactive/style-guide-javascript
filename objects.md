@@ -1,6 +1,6 @@
 # Objects
 
-### Dot Notation
+## Dot Notation
 Use dot notation whenever possible. Even if it causes some inconsistency, it is preferred to use dot notation combined with bracket notation than using only bracket notation
 
   **Good**
@@ -26,7 +26,50 @@ Use dot notation whenever possible. Even if it causes some inconsistency, it is 
 
 ---
 
-### No Trailing ("Dangling") Commas
+## Destructuring
+Use object destructuring whenever possible in both variable assignment and object creation
+
+**Good**
+```javascript
+// Assignment
+let { name, age, location } = user;
+
+// Object creation
+let name = "Anonymous kohactivator";
+let age = 30.6;
+let location = "Chicago, IL";
+
+let user = { name, age, location };
+```
+**Bad**
+```javascript
+// Assignment
+let name = user.name;
+let age = user.age;
+let location = user.location;
+
+// Object creation
+let user = {
+  name: "Anonymouse kohactivator",
+  ago: 30.6,
+  location: "Chicago, IL"
+}
+
+// Object creation (very bad)
+let name = "Anonymous kohactivator";
+let age = 30.6;
+let location = "Chicago, IL";
+
+let user = {
+  name: name,
+  age: age,
+  location: location
+}
+```
+
+---
+
+## No Trailing ("Dangling") Commas
 The last property in an object should not have a trailing comma
 
   **Good**
@@ -46,7 +89,7 @@ The last property in an object should not have a trailing comma
 
 ---
 
-### Property Spacing
+## Property Spacing
 
 One-line properties can be stacked without any padding, but it is recommended to pad functions and other multiline properties with a single empty line
 
