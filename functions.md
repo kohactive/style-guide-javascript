@@ -8,6 +8,8 @@ Never declare a function in a non-function block (if, while, etc). Assign the fu
 if ()
 ```
 
+---
+
 ## Default Parameters
 Use default parameters rather than mutating parameters
 
@@ -26,6 +28,8 @@ function assignOptions(opts) {
   // ...
 }
 ```
+
+---
 
 ## Fat-arrow Functions
 Use unless you need to access the inner scope of the function
